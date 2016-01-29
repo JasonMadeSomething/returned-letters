@@ -18,6 +18,7 @@ puts "Finding files"
 files = Dir.glob('*.csv')
 scannedFileName = Dir.glob("*.txt")[0]
 account_ids = IO.readlines(scannedFileName)
+account_ids.map!(&:chomp)
 returns = account_ids.count
 
 puts "\nFiles found"
